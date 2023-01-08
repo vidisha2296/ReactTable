@@ -10,10 +10,10 @@ const MyTable = () => {
   const [userRole, setUserRole] = useState("");
   const [Id, setId] = useState("");
   const [isChecked, setisChecked]= useState([]);
-  const [countries, setCountries] = useState(null);
-  const [inputValue, setInputValue] = useState("");
-  const [selected, setSelected] = useState("");
-  const [open, setOpen] = useState(false);
+  // const [countries, setCountries] = useState(null);
+  // const [inputValue, setInputValue] = useState("");
+  // const [selected, setSelected] = useState("");
+  // const [open, setOpen] = useState(false);
    const Roles =[{
        id:1,
        role:"Marketing Manager"
@@ -257,7 +257,7 @@ const MyTable = () => {
                         className="w-full mt-2 p-2.5 flex-1 text-white bg-purple-600 rounded-md outline-none ring-offset-2 ring-red-600 focus:ring-2"
                         onClick={() => {
                           setShow(false);
-                          if(isChecked.length ==0){
+                          if(isChecked.length ===0){
                           handleDelete();
                           }else{
                             alldelete();
@@ -382,14 +382,14 @@ const MyTable = () => {
                     </div>
                     <div>
                       <p>
-                        <a className="semi-bold">{data.name}</a>
+                        <span className="semi-bold">{data.name}</span>
                       </p>
                       <p className="text-gray-500 text-sm">{data.userName}</p>
                     </div>
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  {data.isActive == true ? (
+                  {data.isActive === true ? (
                     <div class=" bg-green-200  rounded-full py-2 px-4 h-auto ">
                       <p class="text-green-700 p-2">Active</p>
                     </div>
